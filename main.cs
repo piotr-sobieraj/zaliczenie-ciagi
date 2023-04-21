@@ -1,11 +1,21 @@
 using System;
 using System.Text;
 using System.Diagnostics;
+using System.Linq;
 
-class Sequence{
+
+class BaseSequence{
+
+    private int _Length = 12;
     protected double initialTerm;
-    protected double[] terms = new double[12];
+    internal double[] terms;
 
+    protected int Length {get {return _Length;} set {} }    
+
+    public BaseSequence(){
+        terms = new double[Length];
+    }
+    
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
@@ -26,7 +36,9 @@ class Sequence{
     }    
 }
 
-class ArithmeticSequence : Sequence{
+
+
+class ArithmeticSequence : BaseSequence{
     private double difference;
     
     public ArithmeticSequence(in double difference)
@@ -40,7 +52,7 @@ class ArithmeticSequence : Sequence{
     }   
 }
 
-class GeometricSequence: Sequence{
+class GeometricSequence: BaseSequence{
     double commonRatio = 2;
 
     public GeometricSequence(in double initialTerm){
@@ -52,6 +64,12 @@ class GeometricSequence: Sequence{
     }
 }
 
+class ZippedSequence: BaseSequence{
+    public ZippedSequence(in BaseSequence seq1, in BaseSequence seq2){
+        for(int i = 0; i < Math.Min(seq1.terms.Length, seq2.terms.Length); i++)
+            this.terms[i] = seq1.terms[i] + seq2.terms[i];
+    }
+}
 
 
 class Program {
@@ -64,5 +82,9 @@ class Program {
         GeometricSequence geometricSequence = new GeometricSequence(2);
         Trace.Assert(geometricSequence.ToString() == "GeometricSequence(2, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44)");
         Console.WriteLine(geometricSequence.ToString());
+
+        ZippedSequence zippedSequence = new ZippedSequence(arithmeticSequence, geometricSequence);
+        Trace.Assert(zippedSequence.ToString() == "ZippedSequence(2, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66)");
+        Console.WriteLine(zippedSequence.ToString());       
     }    
 }
