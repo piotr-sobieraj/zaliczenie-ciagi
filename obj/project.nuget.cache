@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vi9f3ifu+gbql+oRyC1anDyrf3XoWOC+E+hJLJ3F5preemGMtvHgtn7Ci4Gc5UMGle78icMgiRD6J1nIxl6wGg==",
+  "dgSpecHash": "Ca6lqJgpx2q9AxYAIiZHVSnenGF2r+TzofIdpNiQ2bMJNlJDsm9HQvEgcnumBZ7Mim23KWWMoJeCDezyv2FD3w==",
   "success": true,
-  "projectFilePath": "/home/runner/CSharp/main.csproj",
+  "projectFilePath": "/home/runner/zaliczenie-ciagi/main.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
