@@ -2,40 +2,6 @@ using System;
 using System.Diagnostics;
 using Models;
 
-class ArithmeticSequence : Sequence{
-    private double difference;
-    
-    public ArithmeticSequence(in double difference)
-    {
-        this.initialTerm = 0;
-        this.difference = difference;       
-
-        this.terms[0] = this.initialTerm;
-        for(int i = 1; i < this.terms.Length; i++)
-            this.terms[i] += i * this.difference + this.initialTerm;        
-    }   
-}
-
-class GeometricSequence : Sequence{
-    double commonRatio = 2;
-
-    public GeometricSequence(in double initialTerm){
-        this.initialTerm = initialTerm;
-
-        this.terms[0] = this.initialTerm;
-        for(int i = 1; i < this.terms.Length; i++)
-            this.terms[i] += i * this.commonRatio * this.initialTerm;               
-    }
-}
-
-class ZippedSequence : Sequence{
-    public ZippedSequence(in Sequence seq1, in Sequence seq2){
-        for(int i = 0; i < Math.Min(seq1.terms.Length, seq2.terms.Length); i++)
-            this.terms[i] = seq1.terms[i] + seq2.terms[i];
-    }
-}
-
-
 class Program {
     public static void Main (string[] args) {
         ArithmeticSequence arithmeticSequence = new ArithmeticSequence(2);
