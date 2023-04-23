@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Models
 {
-    public class Sequence{
+    public abstract class Sequence{
     
         private int _Length = 12;
         protected double initialTerm;
         internal double[] terms;
     
-        public int Length {get {return _Length;} set {} }    
-        public double Mean {get {return _Mean();} set {} }    
+        public int Length {get {return _Length;} }    
+        public double Mean {get {return _Mean();} }    
         
     
         public Sequence(){
@@ -41,7 +41,7 @@ namespace Models
             int Length = this.Length;
     
             if(Length == 0){
-                throw new DivideByZeroException("The sequence is empty. Make sure it contains at least one element.");
+                throw new InvalidOperationException("The sequence is empty - cannot calculate the mean against an empty list.");
             }
             
             double sum = 0;

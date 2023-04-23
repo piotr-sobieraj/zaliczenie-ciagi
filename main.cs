@@ -1,16 +1,18 @@
 using System;
 using System.Diagnostics;
 using Models;
+using Tests;
 
 class Program {
     public static void Main (string[] args) {
-        ArithmeticSequence arithmeticSequence = new ArithmeticSequence(2);
-        Trace.Assert(arithmeticSequence.ToString() == "ArithmeticSequence(0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22)");
-        Trace.Assert(arithmeticSequence.Mean == 11);
+        TestArithmeticSequence testArithmSequence = new TestArithmeticSequence();
+        TestGeometricSequence testGeomSequence = new TestGeometricSequence();
+        
+        ArithmeticSequence arithmeticSequence = new ArithmeticSequence(difference: 2);
         Console.WriteLine(arithmeticSequence.ToString());
         arithmeticSequence.PrintMean();
         
-        GeometricSequence geometricSequence = new GeometricSequence(2);
+        GeometricSequence geometricSequence = new GeometricSequence(initialTerm: 2);
         Trace.Assert(geometricSequence.ToString() == "GeometricSequence(2, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44)");
         Trace.Assert(geometricSequence.Mean == 22.166666666666668);
         Console.WriteLine();
