@@ -6,7 +6,7 @@ namespace Models
 {
     public abstract class Sequence{
     
-        private int _Length = 12;
+        private int _Length = 11;
         protected double initialTerm;
         internal double[] terms;
     

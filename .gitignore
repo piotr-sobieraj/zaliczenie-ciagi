@@ -1,5 +1,2 @@
-bin/Debug/netcoreapp6.0/
 obj/
-.replit
-packages.lock.json
-replit.nix
+bin/
