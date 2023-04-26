@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Models
 {
-    public abstract class Sequence{
+    public class Sequence{
     
         private int _Length = 11;
         protected double initialTerm;
@@ -15,11 +15,10 @@ namespace Models
         
     
         public Sequence(){
-            terms = new double[Length];
+            terms = new double[Length];                  
         }
         
-        public override string ToString()
-        {
+        public override string ToString(){
             StringBuilder sb = new StringBuilder();
             sb.Append(this.GetType().Name);
             sb.Append("(");
@@ -55,6 +54,14 @@ namespace Models
         public void PrintMean(){
             Console.WriteLine("Mean of {0} equals {1}", this.ToString(), this.Mean);
         }
+
+        public Sequence Reverse(){
+            Sequence rev = new Sequence();
+            for(int i = 0; i < this.Length; i++)
+                rev.terms[i] = this.terms[this.Length - i - 1];
+            
+            return rev;
+        }        
     }
 }
     

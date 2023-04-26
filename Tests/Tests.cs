@@ -13,7 +13,8 @@ namespace Tests{
             Trace.Assert(seq1.ToString() == "ArithmeticSequence(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)");
             Console.WriteLine("THEN the sequence is 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0");            
             Trace.Assert(seq1.Mean == 0);
-            Console.WriteLine("AND the mean is 0");            
+            Console.WriteLine("AND the mean is 0");    
+            Console.WriteLine();
             
 
             ArithmeticSequence seq2 = new ArithmeticSequence(difference: -1.5);
@@ -43,10 +44,6 @@ namespace Tests{
             Console.WriteLine("THEN the sequence is -1.5, -3, -6, -9, -12, -15, -18, -21, -24, -27, -30");            
             Trace.Assert(seq2.Mean == -15.136363636363637);
             Console.WriteLine("AND the mean is -15.136363636363637");     
-            
-                
-                
-            
         }
     }    
 
@@ -66,5 +63,20 @@ namespace Tests{
             Console.WriteLine("AND mean of the new sequence is 8.795454545454545");
        }
     }
+
+
+    class TestReversedSequence{
+        public TestReversedSequence(){
+            Console.WriteLine("\n\n##### Starting tests of the  Sequence.Reverse method #####");
+            GeometricSequence geom = new GeometricSequence(initialTerm: 1.125);
+            
+
+            Console.WriteLine("GIVEN geometric sequence 1.125, 2.25, 4.5, 6.75, 9, 11.25, 13.5, 15.75, 18, 20.25, 22.5");
+            Sequence rev_geom = geom.Reverse();                        
+            Console.WriteLine("WHEN a new sequence in reversed order is created");
+            Trace.Assert(rev_geom.ToString() == "Sequence(22.5, 20.25, 18, 15.75, 13.5, 11.25, 9, 6.75, 4.5, 2.25, 1.125)");            
+            Console.WriteLine("THEN the new sequence is 22.5, 20.25, 18, 15.75, 13.5, 11.25, 9, 6.75, 4.5, 2.25, 1.125");            
+    }
+}
 }
 
