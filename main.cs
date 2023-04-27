@@ -2,6 +2,8 @@ using System.Diagnostics;
 using Tests;
 using System.Globalization;
 using System.Threading;
+using Models;
+using System;
 
 
 class Program {
@@ -16,6 +18,7 @@ class Program {
         TestArithmeticSequence testArithmSequence = new TestArithmeticSequence();
         TestGeometricSequence testGeomSequence = new TestGeometricSequence();
         TestZippedSequence testZippedSequence = new TestZippedSequence();      
-        TestReversedSequence testReversed = new TestReversedSequence();              
+        TestReversedSequence testReversed = new TestReversedSequence();         
+        TestFibonacci testFib = new TestFibonacci();                       
     }    
 }
