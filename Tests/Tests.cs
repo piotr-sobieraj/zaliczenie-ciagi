@@ -79,4 +79,10 @@ namespace Tests{
             Console.WriteLine("THEN the new sequence is 1152, -576, 288, -144, 72, -36, 18, -9, 4.5, -2.25, 1.125");            
         }
     }
+
+    class TestFibonacci{
+        public TestFibonacci(){
+            
+        }
+    }
 }
