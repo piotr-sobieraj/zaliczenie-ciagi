@@ -82,7 +82,29 @@ namespace Tests{
 
     class TestFibonacci{
         public TestFibonacci(){
+            Console.WriteLine("\n\n##### Starting tests of the Fibonacci numbers generator  #####");
+
+            Console.WriteLine("GIVEN number 0");
+            Fibonacci fib1 = new Fibonacci("0");
+            Console.WriteLine("WHEN the generator is invoked");
+            Trace.Assert(fib1.ToString() == "Fibonacci(0) = 1");            
+            Console.WriteLine("THEN the Fiboonacci number is 1");            
+
+
+            Console.WriteLine();
+            Console.WriteLine("GIVEN number 10");
+            Fibonacci fib2 = new Fibonacci("10");
+            Console.WriteLine("WHEN the generator is invoked");
+            Trace.Assert(fib2.ToString() == "Fibonacci(10) = 89");            
+            Console.WriteLine("THEN the Fibonacci number is 89");            
+
+
+
             
         }
+            
+            
+            
+        
     }
 }

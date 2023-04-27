@@ -18,12 +18,21 @@ namespace Models{
         }
         
         public Fibonacci(in string paramIn){
-            int n;
-            if(IsNaturalNumberWithZero(in paramIn, out n)){                
-                inputParam = n;
-                calculatedFibNumber = CalculateFibonacci(n);                
+            try{            
+                int n;
+                if(IsNaturalNumberWithZero(in paramIn, out n)){                
+                    inputParam = n;
+                    calculatedFibNumber = CalculateFibonacci(n);                
+                }
+                else throw new ArgumentException("The parameter has to be a positive integer or zero.");
+        
             }
-            else throw new ArgumentException("The parameter has to be a positive integer or zero.");
+            catch(OverflowException){
+                Console.Write("OverflowException for argument {0} when calculating Fibonacci.", paramIn);
+            }
+            catch(ArgumentException){
+                Console.Write("Invalid argument ('{0}') when calculating Fibonacci.", paramIn);
+            }       
         }
        
         private int CalculateFibonacci(in int n){
@@ -41,7 +50,7 @@ namespace Models{
         
 
         public override string ToString(){
-            return $"Fibonacci({inputParam}) = {calculatedFibNumber.ToString()}";
+            return calculatedFibNumber > 0 ? $"Fibonacci({inputParam}) = {calculatedFibNumber.ToString()}" : "";
         }      
     }
 }
