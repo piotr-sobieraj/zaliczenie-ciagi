@@ -1,5 +1,0 @@
-namespace UserInterface{
-    class ReadData{
-        
-    }    
-}
