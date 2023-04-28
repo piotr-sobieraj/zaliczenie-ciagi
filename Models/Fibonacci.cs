@@ -39,6 +39,7 @@ namespace Models{
             if(n == 0 || n == 1) return 1;
 
             try{
+                // Executes statememt and checks on arithmetic overflow
                 checked{
                     return CalculateFibonacci(n - 1) + CalculateFibonacci(n - 2);             
                 }
