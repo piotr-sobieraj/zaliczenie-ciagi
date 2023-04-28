@@ -53,8 +53,8 @@ class Program {
             Console.WriteLine("Pobrano liczbę {0}.", choice);
             
             if (choice == 0) {
+                Console.WriteLine("Uruchom program 'dotnet run --test', aby ucuchomić testy.");                 
                 Console.WriteLine("Najnowszą wersję programu znajdziesz na https://github.com/piotr-sobieraj/zaliczenie-ciagi");
-                Console.WriteLine("Do zobaczenia!"); 
                 return;   
             }
             else if (choice > 0){

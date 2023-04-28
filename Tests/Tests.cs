@@ -25,7 +25,6 @@ namespace Tests{
             Trace.Assert(seq2.Mean == -7.5);
             Console.WriteLine("AND its mean is -7.5");            
         }
-        
     }
 
     class TestGeometricSequence{
@@ -96,15 +95,7 @@ namespace Tests{
             Fibonacci fib2 = new Fibonacci("10");
             Console.WriteLine("WHEN the generator is invoked");
             Trace.Assert(fib2.ToString() == "Fibonacci(10) = 89");            
-            Console.WriteLine("THEN the Fibonacci number is 89");            
-
-
-
-            
+            Console.WriteLine("THEN the Fibonacci number is 89");                 
         }
-            
-            
-            
-        
     }
 }
