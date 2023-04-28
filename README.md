@@ -18,7 +18,7 @@ Na ich podstawie tworzy trzeci ciąg, sumując kolejno wyrazy o tym samym indeks
 Na jego podstawie tworzy czwarty ciąg, odwracając kolejność elementów.
 Następnie wypisuje wszystkie cztery ciągi, jeden pod drugim. W dalszej kolejności wypisuje średnie elementów wszystkich czterech ciagów.
 Na koniec wyświetla n-ty element ciągu Fibonacciego, gdzie n jest pobraną liczbą, o ile wczytana liczba była większa od zera. 
-## Przykłady
+### Przykłady
 
 ```
 Twój wybór (liczba naturalna lub 0, aby zakończyć): 12
