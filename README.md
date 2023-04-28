@@ -56,7 +56,7 @@ Twój wybór (liczba naturalna lub 0, aby zakończyć): c#
 
 ## Duże liczby Fibonacciego
 Rekurencyjne obliczanie liczb Fibonacciego powoduje relatywnie szybkie przekroczenie zakresu liczb naturalnych. 
-Ostanią liczbą Fibonacciego mieszczącą się w zakresie `System.Int32` jest F(45) = 1836311903.
+Ostanią liczbą Fibonacciego mieszczącą się w zakresie `System.Int32` jest `F(45) = 1_836_311_903`.
 
 W razie podania liczby > 45 program wygeneruje wyjątek, po czym będzie kontynuował działanie
 ```Obliczam 46. wyraz ciągu Fibonacciego...
