@@ -54,3 +54,53 @@ W razie podania liczby > 45 program wygeneruje wyjątek, po czym będzie kontynu
 OverflowException for argument 46 when calculating Fibonacci.
 ```
 
+# Testy
+Gdy program został uruchomiony z parametrem `--test`, uruchamiane są testy 
+
+
+```
+dotnet run --test
+##### Starting tests of the ArithmeticSequence class #####
+GIVEN arithmetic sequence with initial term of 0 and the difference of 0
+THEN the generated sequence is 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+AND its mean is 0
+
+GIVEN arithmetic sequence with the initial term of 0 and the difference of -1.5
+THEN the generated sequence is 0, -1.5, -3, -4.5, -6, -7.5, -9, -10.5, -12, -13.5, -15
+AND its mean is -7.5
+
+
+##### Starting tests of the GeometricSequence class #####
+GIVEN geometric sequence with initial term of 1 and the common ratio of -2
+THEN the generated sequence is 1, -2, 4, -8, 16, -32, 64, -128, 256, -512, 1024
+AND its mean is 62.09090909090909
+GIVEN geometric sequence with initial term of -1.5 and the common ratio of -2
+THEN the generated sequence is -1.5, 3, -6, 12, -24, 48, -96, 192, -384, 768, -1536)
+AND its mean is -93.13636363636364
+
+
+##### Starting tests of the ZippedSequence class #####
+GIVEN arithmetic sequence 0.0, 0.75, 1.5, 2.25, 3.0, 3.75, 4.5, 5.25, 6.0, 6.75, 7.5
+AND   geometric sequence  0.5, -1, 2, -4, 8, -16, 32, -64, 128, -256, 512
+WHEN their terms are added one by one
+THEN the new sequence is 0.5, -0.25, 3.5, -1.75, 11, -12.25, 36.5, -58.75, 134, -249.25, 519.5
+AND mean of the new sequence is 34.79545454545455
+
+
+##### Starting tests of the Sequence.Reverse method #####
+GIVEN geometric sequence 1.125, -2.25, 4.5, -9, 18, -36, 72, -144, 288, -576, 1152
+WHEN a new sequence in reversed order is created
+THEN the new sequence is 1152, -576, 288, -144, 72, -36, 18, -9, 4.5, -2.25, 1.125
+
+
+##### Starting tests of the Fibonacci numbers generator  #####
+GIVEN number 0
+WHEN the generator is invoked
+THEN the Fiboonacci number is 1
+
+GIVEN number 10
+WHEN the generator is invoked
+THEN the Fibonacci number is 89
+
+```
+
