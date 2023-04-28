@@ -1,4 +1,13 @@
-# Opis działania programu
+# Spis treści
+- [Opis działania programu](#opis-działania-programu)
+  - [Przykłady](#przykłady)
+  - [Kontrola wprowadzanych danych](#kontrola-wprowadzanych-danych)
+- [Duże liczby Fibonacciego](#duże-liczby-fibonacciego)
+- [Testy](#testy)
+---
+
+
+## Opis działania programu
 Program pobiera od użytkownika niezerową liczbę całkowitą.
 Działa on w pętli, do momentu wprowadzenia przez użytkownika liczby 0.
 Tworzy dwa ciągi po 11 elementów:
@@ -29,7 +38,7 @@ Obliczam 12. wyraz ciągu Fibonacciego...
 Fibonacci(12) = 233
 ```
 
-## Kontrola wprowadzanych danych
+### Kontrola wprowadzanych danych
 Program kontroluje wprowadzane dane pod kątem ich poprawności akceptowane są jedynie liczby naturalne oraz zero. 
 W przypadku podania nieakceptowanych danych wyświetlany jest odpowiedni komunikat. 
 
@@ -45,7 +54,7 @@ Twój wybór (liczba naturalna lub 0, aby zakończyć): c#
 'c#' nie jest liczbą naturalną. Spróbuj jeszcze raz.
 ```
 
-# Duże liczby Fibonacciego
+## Duże liczby Fibonacciego
 Rekurencyjne obliczanie liczb Fibonacciego powoduje relatywnie szybkie przekroczenie zakresu liczb naturalnych. 
 Ostanią liczbą Fibonacciego mieszczącą się w zakresie `System.Int32` jest F(45) = 1836311903.
 
@@ -54,7 +63,7 @@ W razie podania liczby > 45 program wygeneruje wyjątek, po czym będzie kontynu
 OverflowException for argument 46 when calculating Fibonacci.
 ```
 
-# Testy
+## Testy
 Gdy program został uruchomiony z parametrem `--test`, uruchamiane są testy 
 
 
