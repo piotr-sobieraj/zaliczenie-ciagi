@@ -39,7 +39,7 @@ Fibonacci(12) = 233
 ```
 
 ### Kontrola wprowadzanych danych
-Program kontroluje wprowadzane dane pod kątem ich poprawności akceptowane są jedynie liczby naturalne oraz zero. 
+Program kontroluje wprowadzane dane pod kątem ich poprawności. Akceptowane są jedynie liczby naturalne oraz zero. 
 W przypadku podania nieakceptowanych danych wyświetlany jest odpowiedni komunikat. 
 
 ```
@@ -64,7 +64,7 @@ OverflowException for argument 46 when calculating Fibonacci.
 ```
 
 ## Testy
-Gdy program został uruchomiony z parametrem `--test`, uruchamiane są testy 
+Gdy program zostanie uruchomiony z parametrem `--test`, uruchamiane są testy 
 
 
 ```
